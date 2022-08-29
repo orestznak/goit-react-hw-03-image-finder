@@ -4,8 +4,8 @@ import "./ImageGalleryItem.module.css"
 export const ImageGalleryItem = () => {  
     // imageItem
     return(
-        <li class="ImageGalleryItem">
-            <img clsssame="image" src="" alt="" />
+        <li className="ImageGalleryItem">
+            <img className="image" src="" alt="" />
         </li>
     )
 }
