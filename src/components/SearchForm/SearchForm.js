@@ -1,13 +1,12 @@
 import React, {Component} from "react";
-import './SearchForm.module.css';
-
+import { FormSearch,Button,ButtonLabel,Input } from "./SearchForm.styled";
 export class SearchForm extends Component {
    state = {
     searchQuery: "",
    }
 
    handleSearchQueryChange = e =>{
-    this.setState({serchQuery: e.currentTarget.value.toLowerCase()})
+    this.setState({searchQuery: e.currentTarget.value.toLowerCase()})
    }
 
    handleSubmit = e => {
@@ -24,12 +23,12 @@ export class SearchForm extends Component {
 
    render() {
     return(
-        <form className="SearchForm" onSubmit={this.handleSubmit}>
-            <button type="submit" className="button" >
-                <span className="button-label">Search</span>
-            </button>
+        <FormSearch onSubmit={this.handleSubmit}>
+            <Button type="submit">
+                <ButtonLabel>Search</ButtonLabel>
+            </Button>
 
-            <input
+            <Input
             className="input"
             name="searchQuery"
             type="text"
@@ -40,7 +39,7 @@ export class SearchForm extends Component {
             placeholder="Search images and photos"
             
             />
-        </form>
+        </FormSearch>
     )
    }
 }

@@ -1,9 +1,8 @@
 import React, {Component} from "react";
-import './App.module.css'
 
-// import { Searchbar } from "./Searchbar/Searchbar";
+import { SearchBar } from "./SearchBar/SearchBar";
+import { Box } from "./Box";
 // import { ImageGallery } from "./ImageGallery/ImageGallery";
-import { SearchForm } from "./SearchForm/SearchForm";
 
 
 export class App extends Component {
@@ -17,11 +16,16 @@ export class App extends Component {
   render() {
     return(
   
-      <div>
-        <SearchForm onSubmit={this.handleFormSubmit}/>
+      <Box 
+        display="grid"
+        gridTemplateColumns="1fr"
+        gridGap="16px"
+        paddingBottom="24px">
+
+        <SearchBar onSubmit={this.handleFormSubmit}/>
         {/* <ImageGallery/> */}
 
-      </div>
+      </Box>
   
     )
   

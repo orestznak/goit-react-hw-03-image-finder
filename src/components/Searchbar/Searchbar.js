@@ -1,12 +1,12 @@
 import React from "react"
-import './Searchbar.module.css'
+import { SearchBarHeader } from "./SearchBar.styled"
 import { SearchForm } from "components/SearchForm/SearchForm"
 
-export const Searchbar = ({onSubmit}) => {
+export const SearchBar = ({onSubmit}) => {
     return(
-    <header className="Searchbar">
+    <SearchBarHeader>
         <SearchForm onSubmit={onSubmit}/>
         
-    </header>
+    </SearchBarHeader>
     )
 }
