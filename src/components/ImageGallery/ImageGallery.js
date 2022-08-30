@@ -1,17 +1,21 @@
+import React, { Component } from "react";
+
 import { ImageGalleryItem } from "components/ImageGalleryItem/ImageGalleryItem";
-import React from "react";
-import "./ImageGallery.module.css"
+import { ImageGalleryList } from "./ImageGallery.styled";
 
-export const ImageGallery = () =>{
-    // imageGalleryList
-    return(
-        <ul className="ImageGallery">   
-            <ImageGalleryItem/>
+export class ImageGallery extends Component {
+    state= {
 
+    }
 
-        </ul>
-
+    render() {
         
-    )
+        return(
+            <ImageGalleryList>   
+                <ImageGalleryItem/>
+            </ImageGalleryList>   
+        )
+    }
+    
 }
 

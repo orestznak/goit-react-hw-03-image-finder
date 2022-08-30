@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { FormSearch,Button,ButtonLabel,Input } from "./SearchForm.styled";
+
 export class SearchForm extends Component {
    state = {
     searchQuery: "",

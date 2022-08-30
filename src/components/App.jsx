@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 import { SearchBar } from "./SearchBar/SearchBar";
 import { Box } from "./Box";
-// import { ImageGallery } from "./ImageGallery/ImageGallery";
+import { ImageGallery } from "./ImageGallery/ImageGallery";
 
 
 export class App extends Component {
@@ -23,7 +23,7 @@ export class App extends Component {
         paddingBottom="24px">
 
         <SearchBar onSubmit={this.handleFormSubmit}/>
-        {/* <ImageGallery/> */}
+        <ImageGallery/>
 
       </Box>
   
