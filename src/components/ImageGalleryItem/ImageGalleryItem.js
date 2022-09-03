@@ -1,11 +1,27 @@
 import React from "react";
-import "./ImageGalleryItem.module.css"
+import { GalleryItem,ImageItem } from "./ImageGalleryItem.styled";
+import PropTypes from "prop-types"
 
-export const ImageGalleryItem = () => {  
-    // imageItem
+export const ImageGalleryItem = ({
+        onClickShowModal,
+        url,
+        name,
+        originalUrl,
+    }) => {
+        function onClickHandler() {
+            onClickShowModal(originalUrl, name);
+        } 
+
     return(
-        <li className="ImageGalleryItem">
-            <img className="image" src="" alt="" />
-        </li>
+        <GalleryItem onClick={onClickHandler}>
+            <ImageItem src={url} alt={name} />
+        </GalleryItem>
     )
 }
+
+ImageGalleryItem.propTypes = {
+    url: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    onClickShowModal: PropTypes.func.isRequired,
+    originalUrl: PropTypes.string.isRequired,
+  };

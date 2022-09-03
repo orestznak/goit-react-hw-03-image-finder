@@ -1,6 +1,18 @@
-import React from "react";
-import './Button.module.css'
+import { LoadMoreBtn } from './Button.styled';
+import PropTypes from 'prop-types';
 
-export const Button = () => {
-    <button type="" className="Button"></button>
-}
+export const Button = ({ loadMore }) => {
+  const onClickHandler = () => {
+    loadMore();
+  };
+
+  return (
+    <LoadMoreBtn type="button" onClick={onClickHandler}>
+      Load more
+    </LoadMoreBtn>
+  );
+};
+
+Button.propTypes = {
+  loadMore: PropTypes.func.isRequired,
+};
