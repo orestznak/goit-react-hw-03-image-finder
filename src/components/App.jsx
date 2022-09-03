@@ -7,6 +7,7 @@ import { ImageGalleryItem } from "./ImageGalleryItem/ImageGalleryItem";
 import { Loader } from "./Loader/Loader";
 import { Button } from "./Button/Button";
 import { Modal } from "./Modal/Modal";
+import { GlobalStyle } from "./GlobalStyle";
 
 import { getPictures } from "service/api";
 
@@ -63,6 +64,8 @@ export class App extends PureComponent {
         gridTemplateColumns="1fr"
         gridGap="16px"
         paddingBottom="24px">
+          
+        <GlobalStyle />
 
         <SearchBar onSubmit={this.handleFormSubmit}/>
         <ImageGallery>
