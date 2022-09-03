@@ -35,13 +35,14 @@ export class Modal extends Component {
   render() {
     const { url, name } = this.props;
 
-    return createPortal(
+    return (
+      createPortal(
       <Overlay onClick={this.handleBackdropClick}>
         <ModalWindow>
           <img src={url} alt={name} />
         </ModalWindow>
       </Overlay>,
-      modalRoot
-    );
+      modalRoot)
+    )
   }
 }
